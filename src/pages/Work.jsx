@@ -1,5 +1,5 @@
 import React from 'react'
-import Project from "../components/project"
+import Project from "../components/Project"
 import EventCard from "../components/EventCard"
 import { motion } from 'framer-motion'
 
