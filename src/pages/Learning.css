@@ -1,0 +1,379 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.learning_container {
+  padding-top: 5px;
+  max-width: 100vw;
+  margin: auto;
+  color: white;
+  font-family: Inter, system-ui;
+}
+
+.learning_title {
+  margin-left: 150px;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+
+.learning_sub {
+  margin-left: 150px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 80px;
+}
+
+.education_div {
+  margin-left: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.education_item {
+  display: flex;
+  background-color: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 500px;
+  height: 150px;
+  padding: 25px;
+  border-radius: 18px;
+}
+
+.education_image {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education_image img {
+  width: auto;
+  height: 100%;
+  object-fit: fill;
+}
+
+.education_topic {
+  color: white;
+  font-size: 16px;
+}
+
+.education_instute {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.education_time {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.instute_location {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Timeline layout */
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 60px;
+}
+
+/* Center line */
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-50%);
+  
+}
+.free{
+  height: 80px;
+}
+
+/* Timeline item */
+
+.timeline_item {
+  display: flex;
+  width: 50%;
+}
+
+.timeline_item.left {
+  justify-self: flex-start;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.timeline_item.right {
+  justify-self: flex-end;
+  padding-left: 40px;
+}
+
+/* Card */
+
+.timeline_card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 20px;
+  width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  height: 170px;
+}
+
+.timeline_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Icon node */
+
+.timeline_icon {
+  position: absolute;
+  top: 20px;
+  font-size: 22px;
+  background: #111;
+  border: 2px solid white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.timeline_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.timeline_item.left .timeline_icon {
+  right: -62px;
+}
+
+.timeline_item.right .timeline_icon {
+  left: -62px;
+}
+
+/* Text */
+
+.timeline_card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.meta {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #28a745;
+  border: 1px solid rgba(79, 80, 80, 0.17);
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .education_image {
+    height: 100px;
+  }
+
+  .education_image img {
+    object-fit: cover;
+  }
+
+  .timeline_item {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .timeline_item.left,
+  .timeline_item.right {
+    justify-self: flex-start;
+  }
+
+  .timeline_icon {
+    left: -30px !important;
+    right: auto;
+  }
+  .learning_title{
+    padding-top: 40px;
+  }
+}
+
+.leaen_head_img {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive adjustments for tablet and mobile */
+@media (max-width: 900px) {
+
+  .learning_title,
+  .learning_sub {
+    margin-left: 16px;
+  }
+
+  .education_div {
+    margin-left: 16px;
+    gap: 14px;
+    padding-top: 12px;
+  }
+
+  .education_item {
+    width: calc(100% - 32px);
+    height: auto;
+    padding: 18px;
+    flex-direction: row;
+  }
+
+  .education_image {
+    width: 28%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .education_image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .timeline {
+    gap: 36px;
+  }
+
+  .timeline_card {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .learning_title {
+    font-size: 28px;
+    margin-top: 36px;
+    margin-left: 12px;
+  }
+  .learing_head_img {
+    width: 100vw;
+    height: auto;
+  }
+  .learning_sub {
+    margin-left: 12px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .education_div {
+    margin-left: 12px;
+    gap: 12px;
+  }
+
+  .education_item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 24px);
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .education_image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .education_image img {
+    width: auto;
+    height: 100%;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .education_text {
+    width: 100%;
+  }
+
+  .education_topic {
+    font-size: 15px
+  }
+
+  .education_instute,
+  .education_time,
+  .instute_location {
+    font-size: 13px
+  }
+
+  /* Timeline becomes single column */
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline_item {
+    width: 100%;
+    padding-left: 36px;
+  }
+
+  .timeline_item.left,
+  .timeline_item.right {
+    justify-self: flex-start;
+    padding-left: 36px;
+  }
+
+  .timeline_item.left .timeline_icon,
+  .timeline_item.right .timeline_icon {
+    left: -26px;
+    right: auto
+  }
+
+  .timeline_card {
+    padding: 14px;
+    border-radius: 12px;
+    height: auto;
+  }
+}

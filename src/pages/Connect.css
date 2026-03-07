@@ -1,0 +1,239 @@
+.connect_container {
+    overflow-x: hidden;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+*{
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+.connect_gradients {
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+}
+
+.connect_inner {
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.connect_form {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.form_title {
+    margin-bottom: 12px;
+    color: #eef2f7;
+}
+
+.form_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 720px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #181818;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.field {
+    display: flex;
+    flex-direction: column
+}
+
+.field.full {
+    grid-column: 1 / -1
+}
+
+.label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px
+}
+
+input,
+textarea {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #eef2f7;
+    padding: 10px 12px;
+    border-radius: 8px
+}
+
+textarea {
+    resize: vertical
+}
+
+.actions {
+    display: flex;
+    align-items: center
+}
+
+.actions.full {
+    grid-column: 1 / -1;
+    justify-content: flex-end
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #484848, #555556);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: default
+}
+
+.notice {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 8px
+}
+
+.notice.success {
+    background: rgba(6, 199, 85, 0.12);
+    color: #c9f7d1
+}
+
+.notice.error {
+    background: rgba(255, 0, 0, 0.06);
+    color: #ffd6d6
+}
+
+@media (max-width: 768px) {
+    .connect_container {
+        padding: 40px 0;
+        overflow-x: hidden;
+    }
+
+    .connect_title {
+        font-size: 28px
+    }
+
+    .form_grid {
+        grid-template-columns: 1fr
+    }
+
+    .actions.full {
+        justify-content: center
+    }
+    .connect_head{
+        margin: 0;
+        padding:40px 20px;
+    }
+}
+
+.connect_links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social_link {
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #eef2f7;
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: transparent;
+    transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.connect_links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.connect_links {
+    flex-wrap: wrap;
+}
+
+.social_link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.32);
+}
+
+.social_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+}
+
+.social_label {
+    letter-spacing: 0.2px;
+}
+
+/* Brand colors */
+.social_icon.github {
+    background: linear-gradient(135deg, #24292e, #444);
+}
+
+.social_icon.linkedin {
+    background: linear-gradient(135deg, #0A66C2, #005293);
+}
+
+.social_icon.email {
+    background: linear-gradient(135deg, #EA4335, #C5221F);
+}
+
+/* Optional: hide labels on very small screens to keep links compact */
+@media (max-width: 420px) {
+    .social_label {
+        display: none
+    }
+
+    .connect_links {
+        gap: 12px
+    }
+
+    .connect_inner {
+        padding: 0 12px
+    }
+
+    .form_grid {
+        padding: 12px
+    }
+
+    .btn-primary {
+        width: 100%
+    }
+    .connect_container{
+        overflow-x: hidden;
+    }
+}

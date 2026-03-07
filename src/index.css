@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#home-main-container {
+  background-color: #0d0d0d;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#head-gradient-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#home-hero, .home-hero-text, .home-hero-image {
+  position: relative;
+  z-index: 2;
+}

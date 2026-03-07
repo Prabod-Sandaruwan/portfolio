@@ -1,0 +1,50 @@
+.event_card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 16px;
+  color: #eef2ff;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event_card_header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 12px;
+}
+.event_title{
+  font-size:18px;
+  font-weight:700;
+  margin:0;
+}
+.event_location{
+  font-size:13px;
+  color: rgba(255,255,255,0.6);
+}
+.event_date{
+  font-size:13px;
+  color: rgba(128,128,128,0.8);
+}
+.event_description{
+  font-size:14px;
+  color: rgba(235,235,235,0.85);
+  margin: 0;
+  margin-top: 10px;
+}
+.event_link{
+  align-self:flex-start;
+  padding: 8px 12px;
+  border-radius:8px;
+  background: rgba(96,165,250,0.12);
+  color: #cfe9ff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* responsive */
+@media (max-width:768px){
+  .event_card{ width: 100%; margin: 8px 0; }
+}
