@@ -29,7 +29,11 @@ nav {
   height: 100px;
   width: 50vw;
 }
-
+.update-date{
+  color: #f7f7f7;
+  font-size: 11px;
+  margin-top: 4px;
+}
 .footer_logo_div a span {
   color: #ffffff;
   font-size: 60px;

@@ -55,6 +55,7 @@ function App() {
         </div>
         <div className="footer_bottom">
           <p className="rights">© 2026 Prabod Sandaruwan. All rights reserved.</p>
+          <p className="update-date">Last updated: 03 May 2026</p>
         </div>
          <img src="footer-g.svg" alt="" id="footer_img" loading="lazy" aria-hidden="true" />
       </footer>
