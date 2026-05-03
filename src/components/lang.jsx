@@ -55,6 +55,7 @@ export default function Lang() {
         <motion.div variants={item}><Tool img="c-original.svg" name="C" /></motion.div>
         <motion.div variants={item}><Tool img="bootstrap-original.svg" name="Bootstrap" /></motion.div>
         <motion.div variants={item}><Tool img="react-router.svg" name="React Router" /></motion.div>
+        <motion.div variants={item}><Tool img="next.svg" name="Next.js" /></motion.div>
       </motion.div>
 
       <motion.p className="tools_sub_title" variants={heading}>
@@ -75,6 +76,9 @@ export default function Lang() {
         <motion.div variants={item}><Tool img="figma-original.svg" name="Figma" /></motion.div>
         <motion.div variants={item}><Tool img="devicon-original.svg" name="Devicon" /></motion.div>
         <motion.div variants={item}><Tool img="anaconda-original.svg" name="Anaconda" /></motion.div>
+        <motion.div variants={item}><Tool img="codex.png" name="Codex" /></motion.div>
+        <motion.div variants={item}><Tool img="copilot.png" name="Github Copilot" /></motion.div>
+        <motion.div variants={item}><Tool img="intelij.svg" name="IntelliJ IDEA" /></motion.div>
       </motion.div>
     </motion.div>
   )
