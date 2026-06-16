@@ -13,6 +13,36 @@ const headerVariant = { hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 
 function Work() {
   const projects = [
     {
+      id: 'road-crack-01',
+      status: 'need clone',
+      title: 'Image Processing-Based Road Crack Detection System',
+      description:
+        'A dynamic video processing application built with Python and OpenCV that leverages digital image processing techniques to automate infrastructure defect detection. The system implements a robust spatial filtering pipeline—incorporating Gamma transformation, Laplacian sharpening, and adaptive morphological operations—to accurately isolate and highlight road cracks from video frames.',
+      Url: 'https://github.com/Prabod-Sandaruwan/ip-road_crack_detection_system',
+      live: "https://github.com/Prabod-Sandaruwan/ip-road_crack_detection_system",
+      image: 'road.png',
+      tech: [
+        { img: 'python-original.svg', name: 'Python' },
+        { img: 'opencv-original.svg', name: 'OpenCV' },
+        { img: 'matplotlib-original.svg', name: 'Matplotlib' },
+      ],
+    },
+    {
+      id: 'premium-recipes-01',
+      status: 'need clone',
+      title: 'PremiumRecipes',
+      description:
+        'A dynamic, database-driven web application built with PHP and MySQL for exploring and managing culinary recipes. Features secure user authentication with encrypted password hashing, custom session management, and a functional contact form, all delivered through a responsive Bootstrap user interface.',
+      Url: 'https://github.com/Prabod-Sandaruwan/ICT-2204-Recipe-book',
+      live: "https://github.com/Prabod-Sandaruwan/ICT-2204-Recipe-book",
+      image: 'recipe.png',
+      tech: [
+        { img: 'php-original.svg', name: 'PHP' },
+        { img: 'mysql-original.svg', name: 'MySQL' },
+        { img: 'css3-original.svg', name: 'CSS' },
+      ],
+    },
+    {
       id: 'ceylon-01',
       status: 'live',
       title: 'Ceylon',
