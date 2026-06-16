@@ -4,6 +4,20 @@ import "./Learning.css";
 
 const courses = [
   {
+    title: "Meta React Specialization",
+    date: "2026",
+    institution: "Meta + Coursera",
+    desc: "A comprehensive series covering full-stack React web development.",
+    icon: "meta.png",
+  },
+  {
+    title: "Advanced React",
+    date: "2026",
+    institution: "Meta + Coursera",
+    desc: "Mastered custom hooks, context API, performance optimization, and testing.",
+    icon: "meta.png",
+  },
+  {
     title: "React Basics",
     date: "2026",
     institution: "Meta + Coursera",

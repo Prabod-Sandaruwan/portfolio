@@ -26,3 +26,24 @@
   position: relative;
   z-index: 2;
 }
+
+/* Light theme (leave existing styles as dark mode).
+   This applies a page-wide invert/hue-rotate to derive a light appearance
+   and re-inverts natural media (images/videos) so photos stay correct. */
+html.light-theme {
+  transition: filter 250ms ease, background-color 250ms ease;
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #f6f7fb;
+}
+
+html.light-theme img,
+html.light-theme picture,
+html.light-theme video,
+html.light-theme .no-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Optional: slight brightness adjustment for better contrast */
+html.light-theme * {
+  transition: background-color 200ms ease, color 200ms ease;
+}
