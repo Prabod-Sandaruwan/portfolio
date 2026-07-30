@@ -1,0 +1,96 @@
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.custom-cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  will-change: transform;
+}
+
+.custom-cursor__tail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.5) 42%, rgba(255, 255, 255, 0) 72%);
+  filter: blur(4px);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.custom-cursor__tail--1 {
+  width: 20px;
+  height: 20px;
+  opacity: 0.95;
+}
+
+.custom-cursor__tail--2 {
+  width: 16px;
+  height: 16px;
+  opacity: 0.72;
+}
+
+.custom-cursor__tail--3 {
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+}
+
+.custom-cursor__tail--4 {
+  width: 8px;
+  height: 8px;
+  opacity: 0.32;
+}
+
+.custom-cursor__anchor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.custom-cursor__main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 0 solid transparent;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+}
+
+.custom-cursor__ring {
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+}
+
+body.custom-cursor-active,
+body.custom-cursor-active * {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}
