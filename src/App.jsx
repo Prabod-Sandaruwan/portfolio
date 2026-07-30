@@ -9,10 +9,12 @@ import Learning from './pages/Learning'
 import Connect from './pages/Connect'
 import { motion } from 'framer-motion'
 import Nav from './components/Nav'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <header>
         <Nav />
       </header>
@@ -55,7 +57,7 @@ function App() {
         </div>
         <div className="footer_bottom">
           <p className="rights">© 2026 Prabod Sandaruwan. All rights reserved.</p>
-          <p className="update-date">Last updated: 16 June 2026</p>
+          <p className="update-date">Last updated: 30 July 2026</p>
         </div>
          <img src="footer-g.svg" alt="" id="footer_img" loading="lazy" aria-hidden="true" />
       </footer>
