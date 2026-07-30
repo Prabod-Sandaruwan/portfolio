@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
 import ProjectTool from './ProjectTool'
 import './Project.css'
+import useMagneticHover from '../hooks/useMagneticHover'
+import { CursorContext } from '../context/CursorContext'
 
 function Project({ data, title, description, liveUrl, image, tech }) {
     const project =
         data 
+    const exploreButtonRef = useRef(null)
+    const magneticButtonMotion = useMagneticHover(exploreButtonRef)
+    const { setCursorDefault, setCursorHover } = useContext(CursorContext)
 
     const containerVariants = {
         hidden: { opacity: 0, y: 18 },
@@ -48,8 +53,15 @@ function Project({ data, title, description, liveUrl, image, tech }) {
                 </motion.div>
 
                 <motion.div className="project_actions" variants={itemVariant}>
-                    <motion.a whileHover={{ y: -3, transition: { duration: 0.12 } }} href={project.Url} className="btn btn-ghost" aria-label={`Clone ${project.title}`}>
-                        Clone
+                    <motion.a
+                        ref={exploreButtonRef}
+                        style={{ x: magneticButtonMotion.x, y: magneticButtonMotion.y }}
+                        whileHover={{ y: -3, transition: { duration: 0.12 } }}
+                        href={project.Url}
+                        className="btn btn-ghost"
+                        aria-label={`Explore ${project.title}`}
+                    >
+                        Explore
                         <svg className="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -57,7 +69,15 @@ function Project({ data, title, description, liveUrl, image, tech }) {
                 </motion.div>
             </motion.div>
 
-            <motion.figure className="project_image" variants={imageVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+            <motion.figure
+                className="project_image"
+                variants={imageVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.25 }}
+                onMouseEnter={setCursorHover}
+                onMouseLeave={setCursorDefault}
+            >
                 <motion.img src={project.image} alt={`${project.title} screenshot`} loading="lazy" variants={imageVariants} />
             </motion.figure>
         </motion.article>
