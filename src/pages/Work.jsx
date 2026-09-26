@@ -167,6 +167,19 @@ function Work() {
             location="Rajarata University of Sri Lanka"
             description="I participated in the IEEE AGM as part of the logistics team, helping organize and manage event arrangements smoothly."
           />
+          <EventCard
+            title="RoboGenesis Session 2"
+            date="2026 Aug"
+            location="Rajarata University of Sri Lanka"
+            className="robogenesis_event"
+            description="Served as Vice Project Chair for the RAS Introduction to Arduino session, supporting event organization and hands-on practicals."
+          />
+          <EventCard
+            title="Industry Visit to IFS"
+            date="2026 Aug"
+            location="Colombo"
+            description="Visited IFS as part of a university industry exposure program, gaining valuable insights into real-world software engineering practices and professional skills."
+          />
         </motion.div>
       </div>
 

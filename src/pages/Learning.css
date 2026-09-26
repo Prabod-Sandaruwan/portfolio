@@ -47,6 +47,24 @@ body{
   border-radius: 18px;
 }
 
+.incubation_item {
+  height: auto;
+  min-height: 150px;
+}
+
+.incubation_item .education_image {
+  width: 30%;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.incubation_item .education_image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
 .education_image {
   width: 30%;
   height: 100%;
@@ -208,6 +226,11 @@ body{
 
 @media (max-width: 900px) {
 
+  .incubation_item .education_image {
+    width: 28%;
+    height: auto;
+  }
+
   .timeline::before {
     left: 20px;
   }
@@ -293,6 +316,11 @@ body{
 }
 
 @media (max-width: 420px) {
+  .incubation_item .education_image {
+    width: 100%;
+    height: 100px;
+  }
+
   .learning_title {
     font-size: 28px;
     margin-top: 36px;

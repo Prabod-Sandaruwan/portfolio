@@ -7,10 +7,10 @@ const cardVariant = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.42, ease: 'easeOut' } },
 }
 
-function EventCard({ title, date, location, description, link }) {
+function EventCard({ title, date, location, description, link, className = '' }) {
   return (
     <motion.article
-      className="event_card"
+      className={`event_card ${className}`.trim()}
       variants={cardVariant}
       whileHover={{ y: -8, scale: 1.02, boxShadow: '0 18px 40px rgba(2,6,23,0.7)' }}
       whileTap={{ scale: 0.995 }}

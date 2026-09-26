@@ -81,7 +81,7 @@ export default function About() {
               </motion.p>
 
               <motion.p className="about_text_details" variants={itemVariants}>
-                I’m a trainee developer and BSc ICT student based in Colombo, Sri Lanka 🇱🇰. I’m currently working on an e-signature platform, strengthening my skills in React, JavaScript (ES6+), and CSS. I’ve built personal projects including a full-stack expense tracker, mini inventory system, weather app, and recipe book. I also have a foundation in C++ and Qt. I focus on writing clean, maintainable code and building simple, user-friendly interfaces.
+                I’m a trainee developer and BSc ICT student based in Colombo, Sri Lanka 🇱🇰. During my incubation period, I worked on an e-signature platform while strengthening my skills in React, JavaScript (ES6+), and CSS. I’ve built personal projects including a full-stack expense tracker, mini inventory system, weather app, and recipe book. I also have a foundation in C++ and Qt. I focus on writing clean, maintainable code and building simple, user-friendly interfaces.
               </motion.p>
 
               <motion.p className="about_text_title" variants={itemVariants}>

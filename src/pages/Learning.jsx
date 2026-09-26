@@ -128,7 +128,7 @@ export default function Learning() {
           </div>
         </motion.div>
         <motion.div
-          className="education_item"
+            className="education_item"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -145,7 +145,29 @@ export default function Learning() {
           </div>
         </motion.div>
       </div>
-      <p className="learning_title">Courses</p>
+      <p className="learning_title">Industry Experience</p>
+      <p className="learning_sub">Practical experience gained through industry exposure.</p>
+      <div className="education_div">
+        <motion.div
+          className="education_item incubation_item"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="education_image">
+            <img src="paymedia.jpg" alt="PayMedia logo" loading="lazy" />
+          </div>
+          <div className="education_text">
+            <p className="education_topic">Developer</p>
+            <p className="education_instute">PayMedia</p>
+            <p className="education_time">2025 Feb - 2026 Aug</p>
+            <p className="instute_location">Colombo, Sri Lanka</p>
+            <p className="education_instute">Worked on an e-signature platform using Node.js, Spring Boot, MySQL, and MinIO.</p>
+          </div>
+        </motion.div>
+      </div>
+      <p className="learning_title">Courses and Certifications</p>
       <p className="learning_sub">A curated timeline of courses I've completed during my journey.</p>
       <div className="timeline">
 

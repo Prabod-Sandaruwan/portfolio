@@ -79,6 +79,7 @@ export default function Lang() {
         <motion.div variants={item}><Tool img="codex.png" name="Codex" /></motion.div>
         <motion.div variants={item}><Tool img="copilot.png" name="Github Copilot" /></motion.div>
         <motion.div variants={item}><Tool img="intelij.svg" name="IntelliJ IDEA" /></motion.div>
+        <motion.div variants={item}><Tool img="packet-tracer.svg" name="Packet Tracer" /></motion.div>
       </motion.div>
     </motion.div>
   )
